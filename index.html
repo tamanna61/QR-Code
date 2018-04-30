@@ -1,19 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>AJAX Demo</title>
-</head>
-<body>
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <title>qr-code generator</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-<button id="fetch">Click</button>
+    <body>
+    <header class="navbar navbar-default">
+      <h2> Generate QR Code </h2>
+    </header>
+    <div class="container-fluid">
+        <div class="text-center">
+            <img src="https://chart.googleapis.com/chart?cht=qr&chl=Tamanna&chs=160x160&chld=L|0"
+                 class="qr-code img-thumbnail img-responsive">
+        </div>
 
-<script
-        src="http://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous">
+     <div class="form-horizontal">
+      <h3 class="form-group"> Content : </h3>
+        <div>
+            <input type="text"  class="form-control"  id="content"  placeholder="Enter Content">
+        </div>
+     <button type="button" id="generate" class="form-group" class="btn btn-default" > Generate</button>
+     </div>
+    </div>
 
-</script>
-<script src="./app.js"></script>
-</body>
+    <div class="col-sm-12">
+        <button type="button" id="rtn" class="btn btn-default pull-right" class="action-button"> Return </button>
+    </div>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="JS.js"></script>
 </html>
